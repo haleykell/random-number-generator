@@ -95,4 +95,4 @@ writer.print(rand.nextInt(1000000));
 </body>
 </html>
 ```
-13. Click Run -> Run Tomcat -> check restart server to redeploy new changes. This will automatically the web page.
+13. Click Run -> Run Tomcat -> check restart server to redeploy new changes. This will automatically open the web page.
