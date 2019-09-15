@@ -3,3 +3,5 @@ apienv/
 
 # cache files
 __pycache__/
+
+.idea/
