@@ -1,15 +1,15 @@
 # Software Engineering 1
-######Shawn Owen
-######Juliana Osgood
-######Haley Kell
-######Justin Santos
+###### Shawn Owen
+###### Juliana Osgood
+###### Haley Kell
+###### Justin Santos
 
-##Random Number Generator Documentation
-
-
+## Random Number Generator Documentation
 
 
-###How to create the App Engine:
+
+
+### How to create the App Engine:
 After creating the python code, we can create the app engine to store and deploy it. 
 
 1. First create your project by selecting either an existing project or by creating a new one. 
@@ -43,7 +43,7 @@ gcloud app deploy app.yaml \
 13. Visit the app using the URL you created!
 
 
-###How to create the Java Servlet:
+### How to create the Java Servlet:
 
 1. Install Tomcat (http://tomcat.apache.org/) and extract the zipped files to a folder.
 2. Create a new Intellij Project by choosing Java Enterprise and checking Web Application.
