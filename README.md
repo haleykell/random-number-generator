@@ -1,15 +1,19 @@
 # Software Engineering 1
-######Shawn Owen
-######Juliana Osgood
-######Haley Kell
-######Justin Santos
 
-##Random Number Generator Documentation
+###### Shawn Owen
+
+###### Juliana Osgood
+
+###### Haley Kell
+
+###### Justin Santos
+
+## Random Number Generator Documentation
 
 
 
 
-###How to create the App Engine:
+### How to create the App Engine:
 After creating the python code, we can create the app engine to store and deploy it. 
 
 1. First create your project by selecting either an existing project or by creating a new one. 
