@@ -1,11 +1,7 @@
 # Software Engineering 1
-
 ###### Shawn Owen
-
 ###### Juliana Osgood
-
 ###### Haley Kell
-
 ###### Justin Santos
 
 ## Random Number Generator Documentation
@@ -47,7 +43,7 @@ gcloud app deploy app.yaml \
 13. Visit the app using the URL you created!
 
 
-###How to create the Java Servlet:
+### How to create the Java Servlet:
 
 1. Install Tomcat (http://tomcat.apache.org/) and extract the zipped files to a folder.
 2. Create a new Intellij Project by choosing Java Enterprise and checking Web Application.
@@ -99,4 +95,4 @@ writer.print(rand.nextInt(1000000));
 </body>
 </html>
 ```
-13. Click Run -> Run Tomcat -> check restart server to redeploy new changes. This will automatically the web page.
+13. Click Run -> Run Tomcat -> check restart server to redeploy new changes. This will automatically open the web page.
