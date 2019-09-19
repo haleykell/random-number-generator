@@ -6,7 +6,12 @@
 
 ## Random Number Generator Documentation
 
+## Links
 
+Python VM: http://35.222.85.214/
+Python AppEngine: http://random-number-generator-python.appspot.com/
+Java VM:
+Java AppEngine: http://timing-253317.appspot.com/MyServlet
 
 
 ### How to create the App Engine:
