@@ -105,7 +105,7 @@ writer.print(rand.nextInt(1000000));
 ```
 13. Click Run -> Run Tomcat -> check restart server to redeploy new changes. This will automatically open the web page.
 
-### How to run the Request Application
+### How to run the Request Application:
 1. On Google Cloud Platform, either create a new project or choose an existing
    one.
 2. Open the Google Cloud Shell by clicking the > _ icon on the top toolbar.
