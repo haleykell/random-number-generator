@@ -9,8 +9,11 @@
 ## Links
 
 Python VM: http://35.222.85.214/
+
 Python AppEngine: http://random-number-generator-python.appspot.com/
+
 Java VM:
+
 Java AppEngine: http://timing-253317.appspot.com/MyServlet
 
 
@@ -101,3 +104,24 @@ writer.print(rand.nextInt(1000000));
 </html>
 ```
 13. Click Run -> Run Tomcat -> check restart server to redeploy new changes. This will automatically open the web page.
+
+### How to run the Request Application
+1. On Google Cloud Platform, either create a new project or choose an existing
+   one.
+2. Open the Google Cloud Shell by clicking the > _ icon on the top toolbar.
+3. Clone this repository using the command "git clone
+   https://github.com/haleykell/random-number-generator/".
+4. Move into the request-app directory by using the command "cd
+   random-number-generator/request-app"
+5. Ensure that a Python verion higher than 3.5 is installed by issuing the
+   command "python3 --version". If Python 3.5 or higher is not present, follow
+   this guide on how to update: https://cloud.google.com/python/setup.
+6. Run the script with the command "python3 ./main.py". The output should look
+   similar to this:
+```
+Time for requests: 4.410743713378906e-05
+
+<h1> 205919
+<h1> 921422
+<html><body>808243</body></html>
+```
