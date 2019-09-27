@@ -12,6 +12,8 @@ Python VM: http://35.222.85.214/
 
 Python AppEngine: http://random-number-generator-python.appspot.com/
 
+Python AppEngine Europe-West-2 Zone B: https://python-app-new-server.appspot.com/
+
 Java VM:
 
 Java AppEngine: http://timing-253317.appspot.com/MyServlet
