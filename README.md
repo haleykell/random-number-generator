@@ -8,15 +8,17 @@
 
 ## Links
 
-Python VM: http://35.222.85.214/
+Python VM US: http://35.222.85.214/
+Python VM Europe-West-2 Zone B: http://34.89.105.129/
 
-Python AppEngine: http://random-number-generator-python.appspot.com/
-
+Python AppEngine US: http://random-number-generator-python.appspot.com/
 Python AppEngine Europe-West-2 Zone B: https://python-app-new-server.appspot.com/
 
-Java VM:
+Java VM US:
+Java VM Europe-West-2 Zone B: http://35.246.72.72:8080/javarand/MyServlet
 
-Java AppEngine: http://timing-253317.appspot.com/MyServlet
+Java AppEngine US: http://timing-253317.appspot.com/MyServlet
+Java AppEngine Europe-West-2 Zone B: 
 
 
 ### How to create the App Engine:
