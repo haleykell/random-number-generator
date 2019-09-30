@@ -9,19 +9,23 @@
 ## Links
 
 Python VM US: http://35.222.85.214/
+
 Python VM Europe-West-2 Zone B: http://34.89.105.129/
 
 Python AppEngine US: http://random-number-generator-python.appspot.com/
+
 Python AppEngine Europe-West-2 Zone B: https://python-app-new-server.appspot.com/
 
 Java VM US:
+
 Java VM Europe-West-2 Zone B: http://35.246.72.72:8080/javarand/MyServlet
 
 Java AppEngine US: http://timing-253317.appspot.com/MyServlet
+
 Java AppEngine Europe-West-2 Zone B: 
 
 
-### How to create the App Engine:
+### How to create the Python App Engine:
 After creating the python code, we can create the app engine to store and deploy it. 
 
 1. First create your project by selecting either an existing project or by creating a new one. 
@@ -54,6 +58,54 @@ gcloud app deploy app.yaml \
 ```
 13. Visit the app using the URL you created!
 
+### How to create the Python VM: 
+
+1. Create a new project in Google Cloud Platform
+2. Navigate to the Compute Engine page and create a new VM instance with the settings f1-micro, Ubuntu 18.04 LTS, and enable HTTP and HTTPS traffic
+3. Connect to the instance through SSH, which is a button that will launch the VM.
+4. Execute the command "sudo apt update && sudo apt upgrade"
+5. Type "hostname" to find hostname of the server and edit the host file with "sudo nano /etc/hosts". Under the localhost line, type the IP address of the server, press tab and type the hostname. The IP can be found on the Compute Engine page under external IP.
+6. Set up a firewall by executing the following commands:
+> "sudo apt install ufw"
+> "sudo ufw default allow outgoing"
+> "sudo ufw default deny incoming"
+> "sudo ufw allow ssh"
+> "sudo ufw allow http/tcp"
+> "sudo ufw enable"
+7. Clone this repository with the command "git clone https://github.com/haleykell/random-number-generator/"
+8. Switch to the python-app directory with "cd python-app"
+9. Install pip with "sudo apt install python3-pip"
+10. Install the virtual environment with "sudo apt install python3-venv"
+11. Create a virtual environment with "python3 -m venv venv"
+12. Activate the virtual environment with "source venv/bin/activate"
+13. Install project dependencies with "pip install -r requirements.txt"
+14. Install nginx with "sudo apt install nginx"
+15. Install gunicorn with "pip install gunicorn"
+16. Update nginx config file by doing the following:
+sudo rm /etc/nginx/sites-enabled/default
+sudo nano /etc/nginx/sites-enabled/random-number-generator
+17. Copy the contents of RandomNumberFlask/nginx_config.txt into the file. Change [The IP Address of the Server] to your IP.
+18. Restart nginx server with "sudo systemctl restart nginx"
+19. Install supervisor with "sudo apt install supervisor"
+20. Set up supervisor with "sudo nano /etc/supervisor/conf.d/random_number_generator.conf"
+21. Find out the number of workers for gunicorn with (2 * number of cores) + 1 (execute "nproc --all" to find number of cores). This number will most likely be a 3.
+22. Copy the contents of RandomNumberFlask/supervisor_config.txt into the file and change [Your Username] and [Number of Workers]
+23. Make the log files by doing the following:
+24. Do "sudo mkdir -p /var/log/random-number-generator"
+25. Then "sudo touch /var/log/random-number-generator/random-number-generator.err.log"
+26. Then do "sudo touch /var/log/random-number-generator/random-number-generator.out.log"
+27. Restart supervisor with "sudo supervisorctl reload"
+28. Setup a static IP for your virtual machine by going to the VPC Network page on GCP
+29. Under the "External IP addresses" find the IP address being used by the VM instance
+30. Switch "Emphemral" to "Static" and reserve an IP with any name you find appropriate
+31. To access the random number generator navigate to "http://[The IP Address of the Server]"
+
+#### To change the region: 
+
+1. Ensure you are in the project containing your original Python VM
+2. Create a snapshot of your previously created VM (steps shown above). 
+3. Using this snapshot, create a new instance. Use the settings f1-micro and enable HTTP and HTTPS traffic, and select whichever region you would like to host your VM in. For the boot disk, navigate to snapshots, and select the snapshot you created above.
+4. Use your new IP located under "External IP addresses" to navigate to your VM in your new region!
 
 ### How to create the Java Servlet:
 
