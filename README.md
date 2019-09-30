@@ -61,8 +61,16 @@ gcloud app deploy app.yaml \
 ### How to create the Python VM: 
 
 1. Create a new project in Google Cloud Platform
-2. Navigate to the Compute Engine page and create a new VM instance with the settings f1-micro, Ubuntu 18.04 LTS, and enable HTTP and HTTPS traffic
+2. Navigate to the Compute Engine page and create a new VM instance with the settings f1-micro, Ubuntu 18.04 LTS, and enable HTTP and HTTPS traffic.
+
+<img src="/createinstance.png" width="881" height="344">
+
+<img src="/pythonvmspecs.png" width="240" height="523">
+
 3. Connect to the instance through SSH, which is a button that will launch the VM.
+
+<img src="/snapshotssh.png" width="784" height="293">
+
 4. Execute the command "sudo apt update && sudo apt upgrade"
 5. Type "hostname" to find hostname of the server and edit the host file with "sudo nano /etc/hosts". Under the localhost line, type the IP address of the server, press tab and type the hostname. The IP can be found on the Compute Engine page under external IP.
 6. Set up a firewall by executing the following commands:
@@ -104,7 +112,13 @@ sudo nano /etc/nginx/sites-enabled/random-number-generator
 
 1. Ensure you are in the project containing your original Python VM
 2. Create a snapshot of your previously created VM (steps shown above). 
+
+<img src="/createsnapshot.png" width="815" height="289">
+
 3. Using this snapshot, create a new instance. Use the settings f1-micro and enable HTTP and HTTPS traffic, and select whichever region you would like to host your VM in. For the boot disk, navigate to snapshots, and select the snapshot you created above.
+
+<img src="/pythonsnapinvm.png" width="825" height="565">
+
 4. Use your new IP located under "External IP addresses" to navigate to your VM in your new region!
 
 ### How to create the Java Servlet:
