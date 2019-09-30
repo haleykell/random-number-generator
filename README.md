@@ -14,7 +14,7 @@ Python AppEngine: http://random-number-generator-python.appspot.com/
 
 Python AppEngine Europe-West-2 Zone B: https://python-app-new-server.appspot.com/
 
-Java VM:
+Java VM: http://35.246.72.72:8080/javarand/MyServlet
 
 Java AppEngine: http://timing-253317.appspot.com/MyServlet
 
@@ -106,6 +106,19 @@ writer.print(rand.nextInt(1000000));
 </html>
 ```
 13. Click Run -> Run Tomcat -> check restart server to redeploy new changes. This will automatically open the web page.
+
+
+### Java VM 
+
+1. Create a new VM instance on gcp
+2. Install prereqs: Java jdk, tomcat.
+3. clone the random-number-generator repo
+4. Copy the app WEB-INF into tomcats webapps directory `cp repo/path/java-app-vm/src/main/webapp pathto/tomcat/webapps/[app_name]` and compile the java file into the copied `classes/` directory. `javac -d /webapps/app_name/WEB-INF/classes /java-app-vm/src/main/java/Servlet.java`
+5. Update your connection host in tomcat to `0.0.0.0`, in /pathto/tomcat/conf/server.xml
+6. In GCP, create a firewall rule to open up port 8080 for tcp.
+7. Run tomcat, `tomcat/bin/startup.sh`
+8. The app should be running at [external_ip/name_for_app/MyServlet].
+
 
 ### How to run the Request Application:
 1. On Google Cloud Platform, either create a new project or choose an existing
