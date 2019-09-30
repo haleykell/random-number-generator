@@ -19,10 +19,10 @@ async def make_requests(urls):
     create a "queue" of request processes and wait for a response from all of them
     '''
     # Async might be slightly off here, bit rusty
-    start_time = time()
+
     gets = (make_request(url) for url in urls)
     asyncio.gather(*gets)
-    print(f'Time for requests: {time() - start_time}\n')
+
 
 
 async def main():
@@ -45,4 +45,6 @@ if __name__ == '__main__':
     get_event_loop gives us the context to run what we pass to "run_until_complete"
     '''
     l = asyncio.get_event_loop()
+    start_time = time()
     l.run_until_complete(main())
+    print(f'Time for requests: {time() - start_time}\n')
