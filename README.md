@@ -22,7 +22,7 @@ Java VM Europe-West-2 Zone B: http://35.246.72.72:8080/javarand/MyServlet
 
 Java AppEngine US: http://timing-253317.appspot.com/MyServlet
 
-Java AppEngine Europe-West-2 Zone B: 
+Java AppEngine Europe-West-2 Zone B: http://timing-experiment-254603.appspot.com/MyServlet
 
 
 ### How to create the Python App Engine:
@@ -121,7 +121,7 @@ sudo nano /etc/nginx/sites-enabled/random-number-generator
 
 4. Use your new IP located under "External IP addresses" to navigate to your VM in your new region!
 
-### How to create the Java Servlet:
+### How to create the Java App Engine Servlet:
 
 1. Install Tomcat (http://tomcat.apache.org/) and extract the zipped files to a folder.
 2. Create a new Intellij Project by choosing Java Enterprise and checking Web Application.
@@ -174,6 +174,10 @@ writer.print(rand.nextInt(1000000));
 </html>
 ```
 13. Click Run -> Run Tomcat -> check restart server to redeploy new changes. This will automatically open the web page.
+14. On Google Cloud, follow the tutorial to create a Java App Engine
+15. Replace web.xml, index.html, and DemoServlet.java with the files described above
+16. Continue the tutorial to deploy the app
+
 
 ### How to run the Request Application:
 1. On Google Cloud Platform, either create a new project or choose an existing
